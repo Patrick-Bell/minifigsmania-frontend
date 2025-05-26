@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+
+
+.fc .fc-prev-button,
+.fc .fc-next-button {
+  background: white !important; /* Custom background */
+  color: black !important; /* Custom icon color */
+  border-radius: 5px;
+  padding: 6px 10px;
+}
+
+
+.fc-toolbar-title {
+    font-weight: bold;
+    font-size: 20px ;
+  }
+  
+  .fc-button {
+    background-color: white !important; /* Green buttons */
+    color: black !important;
+    border: 1px solid #e9ebee !important;
+  }
+  
+  .fc-button:active,
+  .fc-button:focus {
+    background: #e5e7eb !important; /* Darker gray */
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+.custom-tooltip {
+  font-size: 10px !important;
+  padding: 4px !important;
+}
