@@ -27,7 +27,7 @@ const FeaturedCategories = () => {
           style={{ width: '100%' }} // Ensure Swiper takes full width
           modules={[Autoplay]} // Adding necessary modules
           autoplay={{ delay: 3000 }} // Auto slide every 3 seconds
-          slidesPerView={3} // Display 3 slides at a time (you can adjust)
+          slidesPerView={2} // Display 3 slides at a time (you can adjust)
           loop={true} // Infinite loop of slides
           spaceBetween={20} // Add space between the slides
           breakpoints={{
@@ -35,7 +35,7 @@ const FeaturedCategories = () => {
               slidesPerView: 2, // For small screens
             },
             768: {
-              slidesPerView: 3, // For medium screens
+              slidesPerView: 2, // For medium screens
             },
             1024: {
               slidesPerView: 6, // For large screens

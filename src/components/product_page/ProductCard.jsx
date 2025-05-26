@@ -204,7 +204,7 @@ const ProductCard = ({ product }) => {
               <h3 className="text-sm text-gray-700">
                 <a href={product.href}>
                   <span aria-hidden="true" className="absolute" />
-                  {product.name.length > 18 ? product.name.slice(0, 18) + '...' : product.name}
+                  {product.name.length > 16 ? product.name.slice(0, 16) + '...' : product.name}
                 </a>
               </h3>
               {product.sale_price > 0 ? (

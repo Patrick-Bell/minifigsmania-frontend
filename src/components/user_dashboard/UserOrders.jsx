@@ -46,11 +46,11 @@ const UserOrders = () => {
                 <OrderDetail order={selectedOrder} setSelectedOrder={setSelectedOrder} />
             ) : (
                 <>
-                    <div className="">
+                    <div className="w-full">
                         {/* Order Tabs */}
                         <div className="bg-white rounded-lg mb-4 border border-gray-200">
-                            <div className="flex">
-                                <div onClick={() => handleTabChange('all-orders')} className={`px-4 py-3 text-sm font-medium ${activeTab === 'all-orders' ? 'text-indigo-500' : 'text-gray-500'} ${activeTab === 'all-orders' ? 'border-b-2' : 'border-b-0'} hover:border-b-2 cursor-pointer rounded-bl-lg`}>
+                        <div className="flex">
+                        <div onClick={() => handleTabChange('all-orders')} className={`px-4 py-3 text-sm font-medium ${activeTab === 'all-orders' ? 'text-indigo-500' : 'text-gray-500'} ${activeTab === 'all-orders' ? 'border-b-2' : 'border-b-0'} hover:border-b-2 cursor-pointer rounded-bl-lg`}>
                                     All Orders ({ orders.length })
                                 </div>
                                 <div onClick={() => handleTabChange('processing')} className={`px-4 py-3 text-sm font-medium ${activeTab === 'processing' ? 'text-indigo-500' : 'text-gray-500'} ${activeTab === 'processing' ? 'border-b-2' : 'border-b-0'} hover:border-b-2 cursor-pointer`}>

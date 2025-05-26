@@ -205,12 +205,16 @@ useEffect(() => {
                             </h3>
                             <DisclosurePanel className="pt-6 text-sm text-gray-500">
                                 {section.message.map((msg, i) => (
-                                    <div key={i} className="flex my-2">
-                                        {section.icon && <div className="size-5 mr-2 text-indigo-600">{section.icon}</div>}
-                                        {msg}
+                                    <div key={i} className="flex items-start space-x-2 mb-2">
+                                    {section.icon && (
+                                        <div className="w-5 h-5 text-indigo-600 flex-shrink-0">
+                                        {section.icon}
+                                        </div>
+                                    )}
+                                    <span>{msg}</span>
                                     </div>
                                 ))}
-                            </DisclosurePanel>
+                                </DisclosurePanel>
                         </Disclosure>
                     ))}
                 </form>
