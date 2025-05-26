@@ -35,6 +35,7 @@ const App = () => {
   const location = useLocation(); // Get the current location
   const { user } = useAuth()
 
+  const isUserPage = location.pathname.startsWith('/my-dash')
 
   const getRoute = (path) => {
 
@@ -94,8 +95,13 @@ const App = () => {
 
 </Helmet>
 
-<ChatBotBtn />
-<FeedbackBtn />
+    {!isUserPage && (
+      <>
+      <ChatBotBtn />
+      <FeedbackBtn />
+      </>
+      )}
+
 <CookieBanner />
 
 
