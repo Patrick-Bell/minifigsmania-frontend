@@ -30,11 +30,11 @@ const ProtectedRoute = ({ children, requiredRole }) => {
 
   if (!isAuthenticated) {
     console.log('User is not authenticated');
-    return <Navigate to="/" />;
+    //return <Navigate to="/" />;
   }
 
   if (requiredRole && userRole !== requiredRole) {
-    return <Navigate to="/" />;
+    //return <Navigate to="/" />;
   }
 
   return children;

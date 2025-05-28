@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
     const [authenticated, setAuthenticated] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
     const [isUser, setIsUser] = useState(false);
+    const [loading, setLoading] = useState(false)
     const location = useLocation(); // ✅ Add this to track path changes
 
     const login = async (formData) => {        
@@ -61,31 +62,21 @@ export const AuthProvider = ({ children }) => {
 
     const checkAuth = async () => {
         try {
-            const response = await axios.get(
-                `${import.meta.env.VITE_API_BASE_URL}/api/current-user`,
-                { withCredentials: true }
-            );
-
-            if (response?.data) {
-                setUser(response?.data);
-                setAuthenticated(true); // ✅ Ensure authentication state is updated
-
-                if (response?.data?.user?.role === 'user') {
-                    setIsUser(true);
-                    setIsAdmin(false);
-                } else {
-                    setIsAdmin(true);
-                    setIsUser(false);
-                }
-            } else {
-                setAuthenticated(false);
-            }
-            console.log('checking status', response.data);
+          const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/current-user`, { withCredentials: true });
+          if (response?.data) {
+            setUser(response.data);
+            setAuthenticated(true);
+            setIsUser(response.data.user?.role === 'user');
+            setIsAdmin(response.data.user?.role === 'admin');
+          } else {
+            setAuthenticated(false);
+          }
         } catch (e) {
-            console.error('Auth check error:', e);
-            
+          setAuthenticated(false);
+        } finally {
+          setLoading(false);
         }
-    };
+      };
 
     const updateUser = (newData) => {
         setUser(prev => ({
@@ -103,7 +94,6 @@ export const AuthProvider = ({ children }) => {
                 `${import.meta.env.VITE_API_BASE_URL}/api/logout`,
                 { withCredentials: true }
             );
-            console.log(response.data);
             
             
             setAuthenticated(false);
@@ -111,7 +101,7 @@ export const AuthProvider = ({ children }) => {
             setIsUser(false);
             setUser(null);
             
-            window.location.href = '/';
+            //window.location.href = '/';
         } catch (e) {
             console.log(e);
         }

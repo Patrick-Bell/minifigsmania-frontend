@@ -75,7 +75,7 @@ const NewReleasePage = () => {
           ))}
         </div>
       </div>
-      <SignInPromo />
+        <SignInPromo />
         <BestSells />
         <NewReleases />
       <Footer />
