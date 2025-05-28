@@ -94,14 +94,13 @@ export const AuthProvider = ({ children }) => {
                 `${import.meta.env.VITE_API_BASE_URL}/api/logout`,
                 { withCredentials: true }
             );
-            
-            
+        
             setAuthenticated(false);
             setIsAdmin(false);
             setIsUser(false);
             setUser(null);
             
-            //window.location.href = '/';
+            window.location.reload()
         } catch (e) {
             console.log(e);
         }
