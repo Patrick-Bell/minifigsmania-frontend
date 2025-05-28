@@ -275,7 +275,7 @@ const Navbar = () => {
       </Dialog>
 
       <header className="relative bg-white z-50">
-        <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+        <p className="flex h-10 items-center text-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Use Promo Code SUMMER25 for 15% of your order!
         </p>
 

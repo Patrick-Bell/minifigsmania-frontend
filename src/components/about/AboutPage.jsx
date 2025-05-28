@@ -104,20 +104,20 @@ const AboutPage = () => {
               </div>
               <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
                 <div className="flex flex-col bg-indigo-600 p-8">
-                  <dt className="text-sm font-semibold leading-6 text-white">orders in our first month</dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">10+</dd>
+                  <dt className="text-sm font-semibold leading-6 text-white">orders since launch in March 2025</dt>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">100+</dd>
                 </div>
                 <div className="flex flex-col bg-indigo-600 p-8">
                   <dt className="text-sm font-semibold leading-6 text-white">products to choose from</dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">50+</dd>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">200+</dd>
                 </div>
                 <div className="flex flex-col bg-indigo-600 p-8">
                   <dt className="text-sm font-semibold leading-6 text-white">5 star reviews</dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">10+</dd>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">50+</dd>
                 </div>
                 <div className="flex flex-col bg-indigo-600 p-8">
-                  <dt className="text-sm font-semibold leading-6 text-white">new collection coming soon...</dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">1</dd>
+                  <dt className="text-sm font-semibold leading-6 text-white">average rating</dt>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">4.7</dd>
                 </div>
               </dl>
             </div>

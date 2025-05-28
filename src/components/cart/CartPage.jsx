@@ -35,7 +35,7 @@ const paymentMethodImages = [
 
 const CartPage = () => {
 
-    const { cart, addItemToCart, updateQuantity, removeItemFromCart } = useCart()
+    const { cart, addItemToCart, updateQuantity, removeItemFromCart, clearCart } = useCart()
     const [selectedProduct, setSelectedProduct] = useState(null)
     const [open, setOpen] = useState(false)
     const [code, setCode] = useState('')
@@ -134,7 +134,7 @@ const CartPage = () => {
   
       // Redirect to Stripe Checkout session
       window.location.href = response.data.url;
-      cart = []
+      clearCart()
     } catch (e) {
       console.error('Error during checkout:', e);
     }
@@ -154,7 +154,7 @@ const CartPage = () => {
       console.log(response.data);
   
       window.location.href = response.data.url;
-      cart = []
+      clearCart()
     } catch (e) {
       console.error('Error during checkout:', e);
     }
