@@ -20,12 +20,12 @@ export const AuthProvider = ({ children }) => {
                 { withCredentials: true }
             );
             setUser(response?.data?.user);
-            console.log('user', response.data);
+            console.log('user', response?.data);
             //window.location.reload()
 
             setAuthenticated(true); // ✅ Set authentication state
 
-            if (response.data.role === 'admin') {
+            if (response?.data?.role === 'admin') {
                 setIsAdmin(true);
                 setIsUser(false);
             } else {
@@ -66,11 +66,11 @@ export const AuthProvider = ({ children }) => {
                 { withCredentials: true }
             );
 
-            if (response.data) {
-                setUser(response.data);
+            if (response?.data) {
+                setUser(response?.data);
                 setAuthenticated(true); // ✅ Ensure authentication state is updated
 
-                if (response.data.user.role === 'user') {
+                if (response?.data?.user?.role === 'user') {
                     setIsUser(true);
                     setIsAdmin(false);
                 } else {
@@ -97,22 +97,26 @@ export const AuthProvider = ({ children }) => {
         }));
       };
 
-    const logout = async () => {
-        try{
+      const logout = async () => {
+        try {
             const response = await axios.delete(
                 `${import.meta.env.VITE_API_BASE_URL}/api/logout`,
                 { withCredentials: true }
             );
-            console.log(response.data)
+            console.log(response.data);
+            
+            
             setAuthenticated(false);
-            setIsAdmin(false)
-            setIsUser(false)
-            setUser(null)
-            window.location.href = '/'
-        }catch(e){
-            console.log(e)
+            setIsAdmin(false);
+            setIsUser(false);
+            setUser(null);
+            
+            window.location.href = '/';
+        } catch (e) {
+            console.log(e);
         }
     }
+    
 
     useEffect(() => {
         checkAuth();

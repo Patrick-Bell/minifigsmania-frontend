@@ -29,6 +29,7 @@ const ProtectedRoute = ({ children, requiredRole }) => {
   const isAuthenticated = requiredRole === "user" ? isUser : isAdmin;
 
   if (!isAuthenticated) {
+    console.log('User is not authenticated');
     return <Navigate to="/" />;
   }
 

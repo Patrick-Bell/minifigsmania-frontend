@@ -45,8 +45,8 @@ const ShippingModal = ({ isOpen, setIsOpen }) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="bg-white p-6 rounded-xl shadow-lg w-200">
-              {/* Header */}
+            <Dialog.Panel className="bg-white p-6 rounded-xl shadow-lg w-200 max-h-[60vh] overflow-scroll">
+            {/* Header */}
               <div className="flex justify-between items-center">
                 <Dialog.Title className="text-xl font-semibold text-gray-800">Shipping Options</Dialog.Title>
                 <button onClick={() => setIsOpen(false)}>

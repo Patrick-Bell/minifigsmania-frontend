@@ -134,6 +134,7 @@ const CartPage = () => {
   
       // Redirect to Stripe Checkout session
       window.location.href = response.data.url;
+      cart = []
     } catch (e) {
       console.error('Error during checkout:', e);
     }
@@ -152,8 +153,8 @@ const CartPage = () => {
   
       console.log(response.data);
   
-      // Redirect to Stripe Checkout session
       window.location.href = response.data.url;
+      cart = []
     } catch (e) {
       console.error('Error during checkout:', e);
     }
