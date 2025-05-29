@@ -102,7 +102,9 @@ const Comments = ({ product }) => {
           {comments.length === 0 ? (
             <p className="text-gray-500">No comments yet.</p>
           ) : (
-            comments.map((comment) => (
+            comments
+            .sort((a, b) => new Date(b.created_at) - new Date(a.created_at)) // Sort by latest first
+            .map((comment) => (
               <div key={comment.id} className="border-b border-gray-200 pb-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">

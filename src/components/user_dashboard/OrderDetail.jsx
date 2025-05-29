@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import UserOrderInvoice from './UserOrderInvoice';
 import RefundOrder from './RefundOrder';
+import { FaCcStripe } from "react-icons/fa";
 
 const OrderDetail = ({ order, setSelectedOrder }) => {
   
@@ -185,14 +186,8 @@ const OrderDetail = ({ order, setSelectedOrder }) => {
             <div>
               <p className="text-sm text-gray-600">Payment Method</p>
               <div className="flex items-center mt-1">
-                <svg className="w-8 h-6 mr-2" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="48" height="48" rx="6" fill="#1434CB" />
-                  <path d="M18 31H30V29H18V31Z" fill="white" />
-                  <path d="M18 24H30V16H18V24Z" fill="#FF5F00" />
-                  <path d="M19 20C19 17.7909 20.0536 15.7683 21.7627 14.5C20.7708 13.5538 19.4571 13 18 13C14.6863 13 12 16.134 12 20C12 23.866 14.6863 27 18 27C19.4571 27 20.7708 26.4462 21.7627 25.5C20.0536 24.2317 19 22.2092 19 20Z" fill="#EB001B" />
-                  <path d="M36 20C36 23.866 33.3137 27 30 27C28.5429 27 27.2292 26.4462 26.2373 25.5C27.9464 24.2317 29 22.2092 29 20C29 17.7909 27.9464 15.7683 26.2373 14.5C27.2292 13.5538 28.5429 13 30 13C33.3137 13 36 16.134 36 20Z" fill="#F79E1B" />
-                </svg>
-                <span className="text-sm font-medium">•••• 5678</span>
+                <FaCcStripe className="w-5 h-5 text-indigo-600 mr-2" />
+                <span className="text-sm font-medium">•••• {order?.card_last4 || 'XXXX'}</span>
               </div>
             </div>
           </div>
