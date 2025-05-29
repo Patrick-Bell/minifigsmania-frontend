@@ -115,10 +115,7 @@ const Sidebar = () => {
 
 
   <div className="pt-6">
-    <div className="block items-center rounded-lg text-sm font-medium border-gray-200 border">
-      <img src={qrCode} alt="Logo" className="w-auto h-auto rounded-lg" />
-      <p className="text-center font-bold">Scan me to open on mobile.</p>
-    </div>
+    
     
   </div>
   {/* Logout Button at the very bottom */}
