@@ -13,6 +13,7 @@ import UseShowProducts from "./UseShowProducts"
 import SaleItems from "./SaleItems"
 import SignInPromo from "./SignInPromo"
 import RecentlyViewedProducts from "./RecentlyViewedProducts"
+import Exclusives from "./Exclusives"
 
 const MainPage = () => {
 
@@ -23,6 +24,7 @@ const MainPage = () => {
         <Hero />
         <FeaturedCategories />
         <RecentlyViewedProducts />
+        <Exclusives />
         <BestSells />
         <SaleItems />
         <SignInPromo />

@@ -18,6 +18,7 @@ import ProductLoading from '../dynamic_product/ProductLoading'
 import SignInPromo from '../front_page/SignInPromo'
 import RecentlyViewedProducts from '../front_page/RecentlyViewedProducts';
 import Offer from '../front_page/Offer'
+import Comments from './Comments';
 
 const DynamicProductPage = () => {
     const { id } = useParams();
@@ -83,8 +84,8 @@ const DynamicProductPage = () => {
             <div className="p-6">
                 {/* Tabs Navigation Skeleton */}
                 
-                    <div className={`flex space-x-6 border-b border-gray-300`}>
-                        {["Reviews", "FAQ", "Related Products"].map((tab) => (
+                    <div className={`flex space-x-6 border-b border-gray-300 w-full overflow-auto`}>
+                        {["Reviews", "FAQ", "Related Products", 'Comments'].map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
@@ -106,6 +107,7 @@ const DynamicProductPage = () => {
                             {activeTab === "Reviews" && <Reviews product={product} />}
                             {activeTab === "FAQ" && <FAQSection />}
                             {activeTab === "Related Products" && <RelatedProducts product={product} />}
+                            {activeTab === "Comments" && <Comments product={product} />}
                         </>
                 </div>
             </div>
