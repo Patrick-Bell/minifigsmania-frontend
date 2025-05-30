@@ -126,6 +126,7 @@ const CartPage = () => {
       const response = await axios.post(
         `${import.meta.env.VITE_API_BASE_URL}/api/create-checkout-session`, 
         { cart: cart, code: code.code },
+        { withCredentials: true }
       );
 
       console.log(cart, code)
