@@ -74,9 +74,11 @@ const NewReleasePage = () => {
             </div>
           ))}
         </div>
+        </div>
         <SignInPromo />
-        <BestSells />
+      <div className="max-w-7xl mx-auto">
         <NewReleases />
+        <BestSells />
       </div>
       <Footer />
     </>
