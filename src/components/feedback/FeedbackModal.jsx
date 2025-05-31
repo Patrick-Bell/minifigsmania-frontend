@@ -55,7 +55,7 @@ const HelpCenterModal = ({ isOpen, setIsOpen }) => {
   const importantLinks = [
     { title: "Frequently Asked Questions", icon: <HelpCircle className="w-5 h-5" />, href: "/frequently-asked-questions" },
     { title: "Contact Support", icon: <Phone className="w-5 h-5" />, href: "/contact" },
-    { title: "Email Us", icon: <Mail className="w-5 h-5" />, href: "mailto:support@example.com" },
+    { title: "Email Us", icon: <Mail className="w-5 h-5" />, href: "mailto:minifigsmania@gmail.com" },
     { title: "Terms of Service", icon: <ExternalLink className="w-5 h-5" />, href: "/terms-and-conditions" },
     { title: "Cookie Policy", icon: <ExternalLink className="w-5 h-5" />, href: "/cookies-policy" },
     { title: "Privacy Policy", icon: <ExternalLink className="w-5 h-5" />, href: "/privacy-policy" }

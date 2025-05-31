@@ -7,6 +7,7 @@ import { ArrowUpIcon, BuildingStorefrontIcon, DevicePhoneMobileIcon } from '@her
 import { FaTiktok } from "react-icons/fa";
 import { TbLego } from "react-icons/tb";
 import MobileModal from './MobileModal';
+import AboutModal from '../modals/AboutModal';
 
 
 
@@ -15,6 +16,7 @@ const Footer = () => {
   const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(false)
   const [open, setOpen] = useState(false)
+  const [openAbout, setOpenAbout] = useState(false)
 
   const createNewsletter = async (e) => {
     e.preventDefault()
@@ -61,7 +63,7 @@ const Footer = () => {
         window.open('https://www.tiktok.com/@minifigsmania', '_blank');
         break;
       case 'Products':
-        window.open('/products', '_blank');
+        setOpenAbout(true)
         break;
       default:
         break;
@@ -71,6 +73,7 @@ const Footer = () => {
   return (
     <>
     <MobileModal isOpen={open} setIsOpen={setOpen} />
+    <AboutModal isOpen={openAbout} setIsOpen={setOpenAbout} />
     <footer className="bg-gray-600 text-gray-200 py-12">
       <div className="container mx-auto px-4">
         {/* Newsletter Subscription */}

@@ -203,7 +203,7 @@ const HelpCenter = () => {
               </div>
               <h4 className="font-bold text-gray-800 mb-1">Email Support</h4>
               <p className="text-gray-600 text-sm mb-2">24/7 Response Time</p>
-              <p className="font-medium text-indigo-600">support@example.com</p>
+              <p className="font-medium text-indigo-600">minifigsmania@gmail.com</p>
             </div>
             
             <div className="bg-gray-50 p-5 rounded-lg text-center hover:bg-gray-100 transition">

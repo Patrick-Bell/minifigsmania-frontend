@@ -164,7 +164,7 @@ const CookiesPage = () => {
                                 <p className="text-sm text-gray-700">For more information about how we protect your privacy and data, please review our <span onClick={() => window.open('/privacy-policy', '_blank')} className="text-indigo-600 hover:text-indigo-800 cursor-pointer">Privacy Policy</span>.</p>
                                 <p className="text-sm text-gray-700 mt-3">If you have any questions about our Cookie Policy or how we use cookies, please contact us:</p>
                                 <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 mt-3">
-                                    <li>Email: privacy@minifigstore.example.com</li>
+                                    <li>Email: minifigsmania@gmail.com</li>
                                 </ul>
                             </div>
                         </div>

@@ -202,7 +202,7 @@ const TermsAndConditionsPage = () => {
                         <p className="mb-4 text-sm text-indigo-800">If you have any questions about our return policy, please contact us:</p>
                         <ul className="space-y-3 text-sm text-indigo-800">
                             <li className="flex items-center">
-                                <span className="font-medium mr-2">Email:</span> returns@legocustoms.com
+                                <span className="font-medium mr-2">Email:</span> minifigsmania@gmail.com
                             </li>
                             <li className="flex items-center">
                                 <span className="font-medium mr-2">Customer Service Hours:</span> Monday-Friday, 9:00 AM - 5:00 PM

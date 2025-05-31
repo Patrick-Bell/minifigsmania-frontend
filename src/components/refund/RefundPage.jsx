@@ -27,7 +27,7 @@ const Refund = () => {
                     <p className="font-bold text-indigo-600 text-xs sm:text-sm tracking-widest mb-2 sm:mb-3">POLICY</p>
                     <h2 className="text-3xl font-bold tracking-tight text-balance text-gray-900 sm:text-5xl">Refunds & Returns</h2>
                     <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600 max-w-xl mx-auto">
-                        Thank you for shopping with us. We want to ensure you have a great experience with our custom Lego figures.
+                        Thank you for shopping with us. We want to ensure you have a great experience with our custom figures.
                     </p>
                 </div>
 
@@ -79,7 +79,7 @@ const Refund = () => {
                             <div className="px-4 sm:px-6 py-5 sm:py-6">
                                 <ol className="list-decimal pl-5 space-y-3 text-sm text-gray-700">
                                     <li>
-                                        <strong>Contact Us:</strong> Email our customer service at support@legocustoms.com or submit a return request through your account within 30 days of delivery.
+                                        <strong>Contact Us:</strong> Email our customer service at minifigsmania@gmail.com or submit a return request through your account within 30 days of delivery.
                                     </li>
                                     <li>
                                         <strong>Return Authorisation:</strong> Wait for our confirmation email with a Return Authorisation Number (RAN) and return instructions.
@@ -175,7 +175,7 @@ const Refund = () => {
                         <p className="mb-4 text-sm text-indigo-800">If you have any questions about our return policy, please contact us:</p>
                         <ul className="space-y-3 text-sm text-indigo-800">
                             <li className="flex items-center">
-                                <span className="font-medium mr-2">Email:</span> returns@legocustoms.com
+                                <span className="font-medium mr-2">Email:</span> minifigsmania@gmail.com
                             </li>
                             <li className="flex items-center">
                                 <span className="font-medium mr-2">Customer Service Hours:</span> Monday-Friday, 9:00 AM - 5:00 PM
