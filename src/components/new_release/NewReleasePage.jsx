@@ -74,10 +74,10 @@ const NewReleasePage = () => {
             </div>
           ))}
         </div>
-      </div>
         <SignInPromo />
         <BestSells />
         <NewReleases />
+      </div>
       <Footer />
     </>
   );
