@@ -13,7 +13,7 @@ const Exclusives = () => {
         try{
             const response = await getProducts()
             const validProducts = response.filter(item => item.active)
-            const exclusiveProducts = validProducts.filter(item => item.tag === 'new').slice(0, 6)
+            const exclusiveProducts = validProducts.filter(item => item.category === 'olympics').slice(0, 6)
             setProducts(exclusiveProducts)
 
         }catch(e){

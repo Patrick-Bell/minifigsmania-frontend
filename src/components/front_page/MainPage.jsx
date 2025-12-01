@@ -14,6 +14,8 @@ import SaleItems from "./SaleItems"
 import SignInPromo from "./SignInPromo"
 import RecentlyViewedProducts from "./RecentlyViewedProducts"
 import Exclusives from "./Exclusives"
+import FootballCategory from "./FootballCategory"
+import NewsCategory from "./NewsCategory"
 
 const MainPage = () => {
 
@@ -31,8 +33,8 @@ const MainPage = () => {
         <NewReleases />
         <ComingSoon />
         <Offer />
-        <BestSells />
-        <NewReleases />
+        <FootballCategory />
+        <NewsCategory />
         </div>
         <Footer />
         </>

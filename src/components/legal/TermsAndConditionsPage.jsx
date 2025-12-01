@@ -125,7 +125,7 @@ const TermsAndConditionsPage = () => {
                             <div className="px-4 sm:px-6 py-5 sm:py-6">
                                 <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
                                     <li>You have the right to return items within 30 days of receiving your order, provided the items are in their original condition and packaging.</li>
-                                    <li>To initiate a return, contact our customer service at returns@minifigstore.example.com or use the return process in your account.</li>
+                                    <li>To initiate a return, contact our customer service at minifigsmania@gmail.com or use the return process in your account.</li>
                                     <li>Return shipping costs are the responsibility of the customer unless the item is faulty or incorrect. You may be required to show pictures before returning the item(s).</li>
                                     <li>Refunds will be processed within 5–10 working days after we receive and inspect the returned item.</li>
                                     <li>We reserve the right to refuse a return if items show signs of use or damage.</li>
@@ -189,7 +189,7 @@ const TermsAndConditionsPage = () => {
                             <p className="text-sm font-bold text-indigo-600 uppercase tracking-wider px-4 sm:px-6 pt-6 pb-1">10. Contact Information</p>
                             
                             <div className="px-4 sm:px-6 py-5">
-                                <p className="text-sm text-gray-700">If you have any questions about these Terms & Conditions, please contact us at support@minifigstore.example.com.</p>
+                                <p className="text-sm text-gray-700">If you have any questions about these Terms & Conditions, please contact us at minifigsmania@gmail.com.</p>
                             </div>
                         </div>
 

@@ -46,7 +46,7 @@ const LoginPage = ({ isOpen, setIsOpen, setRegisterModalOpen }) => {
       const response = await login(formData)
       console.log(response)
       toast.success('Successfully Logged in', {
-        description: `Welcome back ${response.user.name}!`
+        description: `Welcome back ${response?.user?.name}!`
       })
 
       setIsOpen(false)
@@ -155,10 +155,8 @@ const LoginPage = ({ isOpen, setIsOpen, setRegisterModalOpen }) => {
                 <button onClick={(e) => handleLogin(e, formData)} className="w-full bg-indigo-600 text-white py-2 rounded-lg mt-2 mb-2 hover:bg-indigo-700 cursor-pointer">
                   Log In
                 </button>
-                <button onSuccess={handleGoogleLogin} class="w-full mt2 px-4 py-2 border rounded-lg flex justify-center gap-2 cursor-pointer hover:bg-gray-100">
-                    <img class="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo"/>
-                    <span>Login with Google</span>
-                </button>
+                
+                
               </form>
 
               {/* Divider */}

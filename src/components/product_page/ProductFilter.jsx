@@ -24,7 +24,7 @@ import { ToyBrick } from 'lucide-react'
 
 const ProductFilter = () => {
   const [selectedSortOption, setSelectedSortOption] = useState('Most Popular');
-  const [productsPerPage, setProductsPerPage] = useState(4); // Default items per page
+  const [productsPerPage, setProductsPerPage] = useState(20); // Default items per page
 
   const fetchProducts = async () => {
     try{
@@ -80,10 +80,10 @@ const ProductFilter = () => {
   ]
 
   const pageOptions = [
-    { name: 4, href: '#', current: true },
-    { name: 8, href: '#', current: false },
-    { name: 12, href: '#', current: false },
-    { name: 20, href: '#', current: false },
+    { name: 20, href: '#', current: true },
+    { name: 50, href: '#', current: false },
+    { name: 75, href: '#', current: false },
+    { name: 100, href: '#', current: false },
   ]
     
   const filters = [
@@ -345,7 +345,7 @@ const ProductFilter = () => {
           <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">All Products</h1>
 
-            <div className="flex items-center">
+            <div className="flex items-center" >
               {/* Sort Menu */}
               <Menu as="div" className="relative inline-block text-left">
                 <div>
@@ -436,6 +436,8 @@ const ProductFilter = () => {
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Filters */}
+              <div className="sticky top-10 self-start p-2">
+              <div className="max-h-[calc(100vh-80px)] overflow-y-auto">
               <form className="hidden lg:block">
                 <h3 className="sr-only">Categories</h3>
                 
@@ -498,6 +500,8 @@ const ProductFilter = () => {
                 ))}
                 <button onClick={(e) => resetFilters(e)} className='mt-4 bg-indigo-600 hover:bg-indigo-700 cursor-pointer w-full p-2 text-white rounded-md'>Reset</button>
               </form>
+              </div>
+              </div>
 
               {/* Product grid */}
               <div className="lg:col-span-3">
@@ -514,7 +518,8 @@ const ProductFilter = () => {
                   </div>
                 ) : (
                   <div className="bg-white">
-                    <div className="mx-auto max-w-2xl py-6 px-4 sm:px-6 lg:max-w-7xl">
+                    <div className="mx-auto max-w-2xl sm:px-6 lg:max-w-7xl">
+                      <p className='text-right text-gray-500 text-sm'>{sortedProducts?.length} products</p>
                       <div className="mt-6 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 h-auto pointer-events-auto">
                         {sortedProducts.slice(0, show).map((product) => (
                           <ProductCard key={product.id} product={product} />
@@ -524,7 +529,7 @@ const ProductFilter = () => {
 
                     {filteredProducts.length > productsPerPage && (
                       <>
-                        <div className="w-full bg-gray-200 rounded-full h-1">
+                        <div className="w-full bg-gray-200 rounded-full h-1 mt-6">
                           <div
                             className="bg-indigo-500 h-1 rounded-full"
                             style={{ width: Math.min((show / filteredProducts.length) * 100, 100) + "%" }}

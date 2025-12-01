@@ -58,7 +58,7 @@ const Offer = () => {
                 
                 <div className="mt-4 flex justify-center">
                     <a 
-                        href="/products" 
+                        href="/products/278" 
                         className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white p-1 text-indigo-600 shadow-md transition duration-300 ease-out hover:scale-105"
                     >
                         <span className="relative rounded-full bg-white px-8 py-2 text-base font-bold">

@@ -157,7 +157,7 @@ const PaymentsPage = () => {
                                 <p className="text-sm text-gray-700 mt-3">If you need additional copies of your receipt or have questions about a charge, you can:</p>
                                 <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 mt-3">
                                     <li>Log in to your account and view your order history</li>
-                                    <li>Contact our customer support team at support@minifigstore.example.com</li>
+                                    <li>Contact our customer support team at minifigsmania@gmail.com</li>
                                 </ul>
                             </div>
                         </div>

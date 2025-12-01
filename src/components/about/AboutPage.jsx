@@ -53,8 +53,8 @@ const AboutPage = () => {
     },
     {
       icon: <Star className="h-8 w-8 text-indigo-600" />,
-      title: "Quality Guarantee",
-      description: "Every figure is thoroughly inspected to ensure the highest quality standards."
+      title: "Shop With Confidence",
+      description: "We have a 30 days return policy, allowing you to shop with peace of mind."
     }
   ]
 

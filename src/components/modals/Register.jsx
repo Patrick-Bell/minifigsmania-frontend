@@ -5,6 +5,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
 import { toast, Toaster } from 'sonner'
 import { useAuth } from '../context/AuthContext';
+import LoginPage from './LoginPage';
 
 const Register = ({ isOpen, setIsOpen, setOpenLogin }) => {
   const [formData, setFormData] = useState({
@@ -61,6 +62,7 @@ const Register = ({ isOpen, setIsOpen, setOpenLogin }) => {
       console.log("Signup Success:", response.data);
     
       // only close the modal and open login if signup actually worked
+      setFormData({ name: "", email: "", password: "", password_confirmation: "" });
       setIsOpen(false);
       setOpenLogin(true);
       
@@ -80,10 +82,8 @@ const Register = ({ isOpen, setIsOpen, setOpenLogin }) => {
 }
   
   
-
-
-
   return (
+    <>
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={setIsOpen}>
         {/* Background Overlay */}
@@ -193,17 +193,7 @@ const Register = ({ isOpen, setIsOpen, setOpenLogin }) => {
                 >
                   Register
                 </button>
-                <button
-                  className="w-full mt-2 px-4 py-2 border rounded-lg flex justify-center gap-2 hover:bg-gray-100 cursor-pointer"
-                >
-                  <img
-                    className="w-6 h-6"
-                    src="https://www.svgrepo.com/show/475656/google-color.svg"
-                    loading="lazy"
-                    alt="google logo"
-                  />
-                  <span>Continue with Google</span>
-                </button>
+                
               </form>
 
               {/* Divider */}
@@ -225,6 +215,7 @@ const Register = ({ isOpen, setIsOpen, setOpenLogin }) => {
         </div>
       </Dialog>
     </Transition>
+    </>
   );
 };
 

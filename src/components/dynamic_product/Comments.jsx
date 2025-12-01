@@ -23,7 +23,7 @@ const Comments = ({ product }) => {
   }, [])
 
   const [formData, setFormData] = useState({
-    name: user?.name || '',
+    name: user?.name || 'Anonymous',
     message: '',
     product_id: product?.id,
     likes: 0,

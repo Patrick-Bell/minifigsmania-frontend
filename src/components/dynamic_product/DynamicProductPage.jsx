@@ -107,7 +107,7 @@ const DynamicProductPage = () => {
                             {activeTab === "Reviews" && <Reviews product={product} />}
                             {activeTab === "FAQ" && <FAQSection />}
                             {activeTab === "Related Products" && <RelatedProducts product={product} />}
-                            {activeTab === "Comments" && <Comments product={product} />}
+                            {activeTab === `Comments` && <Comments product={product} />}
                         </>
                 </div>
             </div>

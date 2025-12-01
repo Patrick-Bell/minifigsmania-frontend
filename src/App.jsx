@@ -69,7 +69,7 @@ const App = () => {
       case '/admin':
         return { title: 'Admin | MinifigsMania' };
       case '/my-dash':
-        return { title: `${user?.user.name}'s Dashboard | MinifigsMania`}
+        return { title: `${user?.name}'s Dashboard | MinifigsMania`}
       case '/reset-password':
         return { title: 'Reset Password | MinifigsMania' };
       case '/terms-and-conditions':
@@ -113,7 +113,6 @@ const App = () => {
     <Route path="/cancel" element={<Cancel />}></Route>
     <Route path="/success" element={<Success />}></Route>
     <Route path="/refund" element={<Refund />}></Route>
-    <Route path="/about" element={<AboutPage />}></Route>
     <Route path="/cart" element={<CartPage />}></Route>
     <Route path="/contact" element={<Contact />}></Route>
     <Route path="/frequently-asked-questions" element={<FAQPage />}></Route>

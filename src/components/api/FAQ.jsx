@@ -57,11 +57,11 @@ export const faqData = {
       },
       {
         question: "How do I request a return?",
-        answer: "To initiate a return, please contact our customer service team through the Contact page or email returns@minifigstore.example.com with your order number. If you made the order when logged in, you can simply log into your account, go to the order and click refund order and follow the steps."
+        answer: "To initiate a return, please contact our customer service team through the Contact page or email minifigsmania@gmail.com with your order number. If you made the order when logged in, you can simply log into your account, go to the order and click refund order and follow the steps."
       },
       {
         question: "What if my order hasn’t arrived?",
-        answer: "If your order hasn't arrived within 7 working days, please first check your tracking information from the shipping confirmation email. Sometimes there are postal delays, especially around holidays. If it’s been longer than expected and there’s no update, please contact us via the Contact page or email support@minifigstore.example.com and we’ll investigate for you."
+        answer: "If your order hasn't arrived within 7 working days, please first check your tracking information from the shipping confirmation email. Sometimes there are postal delays, especially around holidays. If it’s been longer than expected and there’s no update, please contact us via the Contact page or email minifigsmania@gmail.com and we’ll investigate for you."
       }
       
     ],

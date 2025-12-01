@@ -142,7 +142,7 @@ const Footer = () => {
               <ul className="space-y-3 text-sm text-gray-400">
                 {[
                   { name: 'Football', link: '/products?category=football' },
-                  { name: 'NBA', link: '/products?category=nba' },
+                  { name: 'Olympics', link: '/products?category=olympics' },
                   { name: 'Squid Game', link: '/products?category=squid game' },
                   { name: 'Marvel', link: '/products?category=marvel' },
                   { name: 'Disney', link: '/products?category=disney' },
@@ -160,8 +160,8 @@ const Footer = () => {
                   { name: 'Stranger Things', link: '/products?category=stranger things' },
                   { name: 'Sonic The Hedgehog', link: '/products?category=sonic' },
                   { name: 'TMNT', link: '/products?category=tmnt' },
-                  { name: 'Military', link: '/products?category=military' },
-                  { name: 'Harry Potter', link: '/products?category=harry potter' },
+                  { name: 'Wednesday', link: '/products?category=wednesday' },
+                  { name: 'Star Wars', link: '/products?category=star wars' },
                   { name: 'TV', link: '/products?category=tv' }
                 ].map((item, index) => (
                   <li key={index}>

@@ -51,37 +51,35 @@ const navigation = {
       sections: [
         {
           id: 'sports',
-          name: 'Sports',
+          name: 'Popular',
           items: [
             { name: 'Football (most popular)', href: `http://localhost:5173/products?category=football` },
-            { name: 'Basketball', href: '#' },
-            { name: 'Other', href: '#' },
+            { name: 'Stranger Things', href: 'http://localhost:5173/products?category=stranger things' },
+            { name: 'Marvel', href: 'http://localhost:5173/products?category=marvel' },
           ],
         },
         {
           id: 'tv',
           name: 'TV',
           items: [
-            { name: 'Star Wars', href: '#' },
-            { name: 'Marvel', href: '#' },
-            { name: 'Teenage Mutant Ninja Turtles', href: '#' },
+            { name: 'Star Wars', href: 'http://localhost:5173/products?category=star wars' },
+            { name: 'Fantastic 4', href: 'http://localhost:5173/products?category=marvel' },
+            { name: 'Teenage Mutant Ninja Turtles', href: 'http://localhost:5173/products?category=tmnt' },
             { name: 'Sonic', href: 'http://localhost:5173/products?category=sonic' },
-            { name: 'Simpsons', href: '#' },
+            { name: 'Simpsons', href: 'http://localhost:5173/products?category=simpsons' },
           ],
         },
         {
           id: 'other',
           name: 'Other',
           items: [
-            { name: 'Military', href: '#' },
+            { name: 'Military', href: 'http://localhost:5173/products?category=football' },
+            { name: 'Team GB', href: 'http://localhost:5173/products?category=olympics' },
+            { name: 'Wednesday', href: 'http://localhost:5173/products?category=wednesday' },
           ],
         },
       ],
     },
-  ],
-  pages: [
-    { name: 'Company', href: '/about' },
-    { name: 'Stores', href: '#' },
   ],
 }
 
@@ -217,16 +215,6 @@ const Navbar = () => {
               </TabPanels>
             </TabGroup>
 
-
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6 z-90 cursor-pointer">
-              {navigation.pages.map((page) => (
-                <div key={page.name} className="flow-root">
-                  <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
-                    {page.name}
-                  </a>
-                </div>
-              ))}
-            </div>
 
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               {user ? (
@@ -371,17 +359,6 @@ const Navbar = () => {
                         </div>
                       </PopoverPanel>
                     </Popover>
-                  ))}
-
-
-                  {navigation.pages.map((page) => (
-                    <a
-                      key={page.name}
-                      href={page.href}
-                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer"
-                    >
-                      {page.name}
-                    </a>
                   ))}
                 </div>
               </PopoverGroup>

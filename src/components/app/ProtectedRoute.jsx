@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 
 const ProtectedRoute = ({ children, requiredRole }) => {
-  const { user, isUser, isAdmin, checkAuth } = useAuth();
+  const { user, isUser, isAdmin, checkAuth, authenticated } = useAuth();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -14,13 +14,14 @@ const ProtectedRoute = ({ children, requiredRole }) => {
     verify();
   }, []);
 
-  const userRole = user?.user?.role;
+  const userRole = user?.role;
 
   console.log("user:", user);
   console.log("user role:", userRole);
   console.log("required role:", requiredRole);
   console.log("isUser:", isUser);
   console.log("isAdmin:", isAdmin);
+  console.log('authenticated', authenticated)
 
   if (loading) {
     return <div>Loading...</div>; // Or your loading spinner

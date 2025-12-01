@@ -72,7 +72,7 @@ const UserDashboard = ({ setSection }) => {
       <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-6 text-white">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           <div>
-            <h2 className="text-xl font-bold mb-1">Welcome back, {user?.user?.name}!</h2>
+            <h2 className="text-xl font-bold mb-1">Welcome back, {user?.name}!</h2>
             <p className="text-indigo-100">Your last login was on April 13, 2025</p>
           </div>
           <div className="mt-4 md:mt-0">

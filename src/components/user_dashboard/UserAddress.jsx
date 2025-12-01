@@ -9,14 +9,14 @@ const UserAddress = () => {
   const { user, updateUser } = useAuth()
 
   const [formData, setFormData] = useState({
-    name: user?.user.name || '',
-    address_line_1: user?.user.address_line_1 || '',
-    address_line_2: user?.user.address_line_2 || '',
-    city: user?.user.city || '',
-    state: user?.user.state || '',
-    postal_code: user?.user.postal_code || '',
-    country: user?.user.country || '',
-    phone_number: user?.user.phone || '',
+    name: user?.name || '',
+    address_line_1: user?.address_line_1 || '',
+    address_line_2: user?.address_line_2 || '',
+    city: user?.city || '',
+    state: user?.state || '',
+    postal_code: user?.postal_code || '',
+    country: user?.country || '',
+    phone_number: user?.phone || '',
   });
 
   const [isEditing, setIsEditing] = useState(false);

@@ -53,11 +53,12 @@ useEffect(() => {
             icon: <CheckIcon />,
             message: [
                 `${product?.name} custom minifigure.`, 
+                `${product?.id === 278 ? 'The mystery figure will include a randomly selected figure from our collection. It will be in new condition. Who will you get?' : '' }`,
                 `Category: ${product?.category}.`,
                 'Compatible with major brands such as LEGO.', 
                 `Weight: ${product?.weight}g.`, 
                 `Height: ${product?.height}cm.`, 
-                `Accessories: ${product?.accessories}.`,
+                `${product?.accessories !== '' ? 'Accessories: ' + product?.accessories : 'No accoesssories included.'}`,
                 'Not suitable for children under 3 years of age due to small parts.'
             ]
         },
@@ -90,7 +91,7 @@ useEffect(() => {
     return (
         <div className="flex flex-col md:flex-row justify-center p-6 mx-auto gap-10 w-full">
             {/* Product Images */}
-            <div className="flex flex-col items-center md:items-start space-y-4">
+            <div className="flex flex-col items-center md:items-start space-y-4 md:sticky md:top-5 h-full">
                 
                     <div className="flex flex-col items-center">
                         {/* Main Image */}
@@ -137,11 +138,11 @@ useEffect(() => {
                 {/* Price Section */}
                  {product?.sale_price > 0 ? (
                     <div className="flex">
-                        <p className="text-2xl font-medium line-through text-red-500">£{product.sale_price}</p>
-                        <p className="text-2xl ml-3 font-medium text-gray-900">£{product?.price}</p>
+                        <p className="text-2xl font-medium line-through text-red-500">£{product?.sale_price?.toFixed(2)}</p>
+                        <p className="text-2xl ml-3 font-medium text-gray-900">£{product?.price?.toFixed(2)}</p>
                     </div>
                 ) : (
-                    <p className="text-2xl font-medium text-gray-900">£{product?.price}</p>
+                    <p className="text-2xl font-medium text-gray-900">£{product?.price?.toFixed(2)}</p>
                 )}
 
                 {/* Star Rating */}
@@ -204,16 +205,16 @@ useEffect(() => {
                                 </DisclosureButton>
                             </h3>
                             <DisclosurePanel className="pt-6 text-sm text-gray-500">
-                                {section.message.map((msg, i) => (
-                                    <div key={i} className="flex items-start space-x-2 mb-2">
-                                    {section.icon && (
-                                        <div className="w-5 h-5 text-indigo-600 flex-shrink-0">
-                                        {section.icon}
-                                        </div>
-                                    )}
-                                    <span>{msg}</span>
-                                    </div>
-                                ))}
+                            {section.message.map((msg, i) => (
+                                        msg ? (
+                                            <div key={i} className="flex items-start space-x-2 mb-2">
+                                                <div className="w-5 h-5 text-indigo-600 flex-shrink-0">
+                                                    {section.icon}
+                                                </div>
+                                                <span>{msg}</span>
+                                            </div>
+                                        ) : null
+                                    ))}
                                 </DisclosurePanel>
                         </Disclosure>
                     ))}

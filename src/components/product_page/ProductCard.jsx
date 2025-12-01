@@ -207,18 +207,27 @@ const ProductCard = ({ product }) => {
                   {product.name.length > 16 ? product.name.slice(0, 16) + '...' : product.name}
                 </a>
               </h3>
-              {product.sale_price > 0 ? (
+              {product?.sale_price > 0 ? (
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                  <p className="text-md font-bold text-gray-900">£{product.price}</p>
-                  <p className="text-sm font-medium line-through text-gray-500 ml-2">£{product.sale_price}</p>
+                    <p className="text-md font-bold text-gray-900">
+                      £{product?.price?.toFixed(2)}
+                    </p>
+                    <p className="text-sm font-medium line-through text-gray-500 ml-2">
+                      £{product?.sale_price?.toFixed(2)}
+                    </p>
                   </div>
-                  <div className="text-xs bg-green-200 text-green-600 rounded-md p-1">{calculatePercentageDiscount(product?.sale_price, product?.price)}%</div>
+
+                  <div className="text-xs bg-green-200 text-green-600 rounded-md p-1">
+                    {calculatePercentageDiscount(product?.sale_price, product?.price)}%
+                  </div>
                 </div>
-              ):(
-                <p className="text-md font-bold text-gray-900">£{(product.price).toFixed(2)}</p>
+              ) : (
+                <p className="text-md font-bold text-gray-900">
+                  £{product?.price?.toFixed(2)}
+                </p>
               )}
-            </div>
+              </div>
             <div className="flex items-center gap-1 mt-1">
             {averageRating ? (
               <>

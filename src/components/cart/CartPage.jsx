@@ -312,7 +312,8 @@ const CartPage = () => {
         </div>
         
         {/* Order Summary Section */}
-        <div className="bg-white p-6 overflow-auto">
+        <div className="bg-white p-6 relative">
+          <div className='sticky top-10 z-40 self-start'>
           <h2 className="text-2xl font-bold text-gray-900 pb-4">Order Summary</h2>
           <div className='flex pb-4 gap-3 max-w-100 overflow-auto'>
             {cart.map((item, i) => (
@@ -436,6 +437,7 @@ const CartPage = () => {
              </div>
 
           </div>
+        </div>
         </div>
       </div>
     </div>

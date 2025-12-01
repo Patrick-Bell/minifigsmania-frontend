@@ -45,7 +45,7 @@ const UserReviews = () => {
           rating: 5,
           title: '',
           review: '',
-          name: user?.user.name || 'Guess',
+          name: user?.name || 'Guess',
           isSubmitting: false,
           isExpanded: false,
           user_id: user?.user?.id,

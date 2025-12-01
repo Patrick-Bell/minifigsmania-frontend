@@ -178,7 +178,7 @@ const Refund = () => {
                                 <span className="font-medium mr-2">Email:</span> minifigsmania@gmail.com
                             </li>
                             <li className="flex items-center">
-                                <span className="font-medium mr-2">Customer Service Hours:</span> Monday-Friday, 9:00 AM - 5:00 PM
+                                <span className="font-medium mr-2">Customer Service Hours:</span> Monday-Sunday, 9:00 AM - 5:00 PM
                             </li>
                         </ul>
                         <p className="mt-4 text-sm text-indigo-800">We will get back to you within 48 hours.</p>

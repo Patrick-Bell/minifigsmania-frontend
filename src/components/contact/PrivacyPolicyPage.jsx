@@ -165,7 +165,7 @@ const PrivacyPolicyPage = () => {
                                     <li><span className="font-medium">Right to Object:</span> You can object to processing of your data.</li>
                                     <li><span className="font-medium">Right to Withdraw Consent:</span> You can withdraw consent at any time.</li>
                                 </ul>
-                                <p className="text-sm text-gray-700 mt-3">Contact us at privacy@minifigstore.example.com to exercise these rights. We may need to verify your identity before responding to your request.</p>
+                                <p className="text-sm text-gray-700 mt-3">Contact us at minifigsmania@gmail.com to exercise these rights. We may need to verify your identity before responding to your request.</p>
                             </div>
                         </div>
 
@@ -183,7 +183,7 @@ const PrivacyPolicyPage = () => {
                         <div className="bg-white overflow-hidden">
                             <p className="text-sm font-bold text-indigo-600 uppercase tracking-wider px-4 sm:px-6 pt-6 pb-1">13. Contact</p>
                             <div className="px-4 sm:px-6 py-5">
-                                <p className="text-sm text-gray-700">If you have any questions or concerns regarding our Privacy Policy or our data practices, please contact our Privacy Officer at privacy@minifigstore.example.com.</p>
+                                <p className="text-sm text-gray-700">If you have any questions or concerns regarding our Privacy Policy or our data practices, please contact our Privacy Officer at minifigsmania@gmail.com.</p>
                             </div>
                         </div>
                     </div>
@@ -193,13 +193,10 @@ const PrivacyPolicyPage = () => {
                         <p className="mb-4 text-sm text-indigo-800">For privacy-related inquiries, contact us:</p>
                         <ul className="space-y-3 text-sm text-indigo-800">
                             <li className="flex items-center">
-                                <span className="font-medium mr-2">Email:</span> privacy@minifigstore.example.com
+                                <span className="font-medium mr-2">Email:</span> minifigsmania@gmail.com
                             </li>
                             <li className="flex items-center">
-                                <span className="font-medium mr-2">Postal Address:</span> MinifigsMania, 123 Brick Street, Toy City, TC 12345
-                            </li>
-                            <li className="flex items-center">
-                                <span className="font-medium mr-2">Support Hours:</span> Monday-Friday, 9:00 AM - 5:00 PM EST
+                                <span className="font-medium mr-2">Support Hours:</span> Monday-Sunday, 9:00 AM - 5:00 PM GMT
                             </li>
                         </ul>
                         <p className="mt-4 text-sm text-indigo-800">We aim to respond to all privacy-related inquiries within 48 hours.</p>

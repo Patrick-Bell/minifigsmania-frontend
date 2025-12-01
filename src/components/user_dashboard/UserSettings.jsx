@@ -10,9 +10,9 @@ const UserSettingsBasic = () => {
   const { user, checkAuth } = useAuth()
   // State for form values
   const [personalInfo, setPersonalInfo] = useState({
-    name: user?.user.name,
-    email: user?.user.email,
-    phone_number: user?.user.phone_number
+    name: user?.name,
+    email: user?.user?.email,
+    phone_number: user?.user?.phone_number
   });
 
   const [password, setPassword] = useState({
@@ -22,10 +22,10 @@ const UserSettingsBasic = () => {
   });
 
   const [notifications, setNotifications] = useState({
-    order_notifications: user?.user.order_notifications,
-    promotion_notifications: user?.user.promotion_notifications,
-    new_product_notifications: user?.user.new_product_notifications,
-    newsletter_notifications: user?.user.newsletter_notifications
+    order_notifications: user?.user?.order_notifications,
+    promotion_notifications: user?.user?.promotion_notifications,
+    new_product_notifications: user?.user?.new_product_notifications,
+    newsletter_notifications: user?.user?.newsletter_notifications
   });
 
   const [activeTab, setActiveTab] = useState("personal");

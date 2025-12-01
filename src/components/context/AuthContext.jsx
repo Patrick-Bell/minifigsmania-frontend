@@ -21,12 +21,13 @@ export const AuthProvider = ({ children }) => {
                 { withCredentials: true }
             );
             setUser(response?.data?.user);
-            console.log('user', response?.data);
+            console.log('response', response.data)
+            console.log('user', response?.data?.user);
             //window.location.reload()
 
             setAuthenticated(true); // ✅ Set authentication state
 
-            if (response?.data?.role === 'admin') {
+            if (response?.data?.user?.role === 'admin') {
                 setIsAdmin(true);
                 setIsUser(false);
             } else {
@@ -53,6 +54,7 @@ export const AuthProvider = ({ children }) => {
                 description: 'You can now log in',
                 autoClose: 3000
             });
+            return response.data
         } catch (e) {
             //console.error('Signup error:', e);
             //toast.error(e.response.data.error);
@@ -62,21 +64,28 @@ export const AuthProvider = ({ children }) => {
 
     const checkAuth = async () => {
         try {
-          const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/current-user`, { withCredentials: true });
-          if (response?.data) {
-            setUser(response.data);
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_BASE_URL}/api/current-user`,
+            { withCredentials: true }
+          );
+      
+          if (response?.data?.user) {
+            setUser(response.data.user); // ✅ only the user object
             setAuthenticated(true);
-            setIsUser(response.data.user?.role === 'user');
-            setIsAdmin(response.data.user?.role === 'admin');
+            setIsUser(response.data.user.role === 'user');
+            setIsAdmin(response.data.user.role === 'admin');
           } else {
             setAuthenticated(false);
+            setUser(null);
           }
         } catch (e) {
           setAuthenticated(false);
+          setUser(null);
         } finally {
           setLoading(false);
         }
       };
+      
 
     const updateUser = (newData) => {
         setUser(prev => ({
