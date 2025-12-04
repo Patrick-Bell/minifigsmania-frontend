@@ -127,15 +127,16 @@ const CartPage = () => {
         `${import.meta.env.VITE_API_BASE_URL}/api/create-checkout-session`, 
         { cart: cart, code: code.code },
         { withCredentials: true }
-      );
-
-      console.log(cart, code)
-  
-      console.log(response.data);
+      );  
   
       // Redirect to Stripe Checkout session
+
+      if (response.data.url.includes('success')){
+        clearCart()
+      }
+
+
       window.location.href = response.data.url;
-      clearCart()
     } catch (e) {
       console.error('Error during checkout:', e);
     }

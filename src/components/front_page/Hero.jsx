@@ -24,11 +24,7 @@ const Hero = () => {
       <div className="mx-auto py-20">
         <div className="mb-8 m-1 w-[90%] mx-auto text-center sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Announcing our collection release.{' '}
-            <a href="/new-release" className="font-semibold text-indigo-600">
-              <span aria-hidden="true" className="absolute inset-0" />
-              Read more <span aria-hidden="true">&rarr;</span>
-            </a>
+            New Series Coming Soon...{' '}
           </div>
         </div>
         <div className="text-center">
