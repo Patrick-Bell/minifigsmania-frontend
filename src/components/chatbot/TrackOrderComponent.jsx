@@ -12,7 +12,8 @@ const TrackOrderComponent = ({ setChatHistory }) => {
 
     const fetchOrderDetails = async (orderNumber) => {
       try{
-        const response = await axios.get(`http://localhost:3000/api/chatbot-order-status/${orderNumber}`, { withCredentials: true });
+        
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/chatbot-order-status/${orderNumber}`, { withCredentials: true });
         setOrder(response.data)
         console.log(response.data)
       }catch(e){
